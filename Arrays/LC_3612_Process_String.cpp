@@ -16,26 +16,26 @@ public:
     string processStr(string s) {
         string sc = "";
         
-        // C++98 compatible traditional for-loop
+        
         for (int i = 0; i < s.length(); i++) {
-            char c = s[i]; // Get current character
+            char c = s[i]; 
             
-            // Check for special operation characters
+           
             if (c == '*' || c == '#' || c == '%') {
                 if (c == '#') {
-                    // Double the current string
+                   
                     sc.append(sc);
                 } else if (c == '%') {
-                    // Reverse the current string
+                  
                     reverse(sc.begin(), sc.end());
                 } else {
-                    // Behave like a backspace: remove the last character safely using erase
+                   
                     if (!sc.empty()) {
                         sc.erase(sc.length() - 1);
                     }
                 }
             } else {
-                // Normal character, just append using += operator
+               
                 sc += c;
             }
         }
