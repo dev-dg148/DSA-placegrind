@@ -19,6 +19,7 @@ public:
                 int rem = d % 10;
                 if (rem != 0 && i % rem == 0) {
                     d /= 10;
+            
                 } else {
                     break;
                 }
